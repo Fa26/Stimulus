@@ -12,19 +12,84 @@
  *
  *= require_tree .
  *= require_self
+ *= require actiontext
  */
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
 
  body{
-     background: url('https://cdn.pixabay.com/photo/2022/03/10/15/13/clouds-7060045_960_720.jpg');
-     color:rgb(197, 59, 9);
+    /* background: url('https://cdn.pixabay.com/photo/2022/03/10/15/13/clouds-7060045_960_720.jpg');*/
+    /* color:rgb(197, 59, 9);
      background-size: cover;
-     height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-weight: 400;
+     height: 100vh;*/
+     font-family: 'Inter', sans-serif;
    
  }
+ nav{
+    /* background:red;*/
+     display:flex;
+     justify-content:start;
+     align-items:flex-start;
+     padding-top:30px;
+     width:20%;
+     }
+ nav ul>li{ padding: 15px; list-style: none;color:white; font-size:1.4em; }
+ nav ul>li>a{text-decoration:none; color:white;}
+
+
+.carusel{
+    z-index:-999999;
+    height: 100vh;
+    position:absolute;
+    top:0px;
+    width:100%;
+
+   
+}
+
+.one{
+    background:url('https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014618_960_720.jpg') no-repeat center center;
+    background-size: cover;   
+    width:100%;
+    height:100vh;
+
+}
+.two{
+   background: url('https://cdn.pixabay.com/photo/2021/03/02/01/07/cyberpunk-6061251_960_720.jpg') no-repeat center center;
+   background-size: cover;   
+   width:100%;
+   height:100vh;
+
+}
+.three{
+    background:url('https://cdn.pixabay.com/photo/2020/04/01/12/46/city-4991094_960_720.jpg');
+    background-size: cover;   
+    width:100%;
+    height:100vh;
+}
+.four{
+    background:url('https://cdn.pixabay.com/photo/2020/12/19/03/27/person-5843476_960_720.jpg');
+    background-size: cover;   
+    width:100%;
+    height:100vh;
+}
+
+.botones{
+    position:absolute;
+    bottom:70px;
+    left:900px;
+    
+   
+}
+button{
+    background:transparent;
+    color:white;
+
+}
+
+
+
+/*****************************************/
+
 
  .card{
      position: relative;
@@ -40,8 +105,6 @@
 
  }
 
- button{
-     border-radius: 2%;
-     padding:5px;
-     margin-left: 10px;
- }
+
+
+ 

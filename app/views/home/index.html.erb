@@ -1,24 +1,17 @@
-<div data-controller="hello">
-<input data-hello-target="name"  type="text">
-<button data-action="click->hello#greet" >Push Me</button><br><br>
-<span data-hello-target="anuncement" style=" color:coral;"></span><br><br>
 
+<div data-controller="hide" data-hide-index-value="1" class="carusel">
+    <div data-hide-target="slide" class="one"></div>
+    <div data-hide-target="slide" class="two"></div>
+    <div data-hide-target="slide" class="three"></div>
+    <div data-hide-target="slide" class="four"></div>
 
-<button data-hello-target="uno" data-id="one" data-action="hello#checar">Uno</button>
-<button  data-hello-target="dos" data-id="two" data-action="click->hello#checar">Dos</button>
-<button data-hello-target="tres" data-id="last" data-action="click->hello#checar">Tres</button><br><br>
-<span data-hello-target="botonAlert" ></span>
-
-<div class="card">
-    <p data-hello-target="card"></p>
+<div class="botones">
+    <button data-action="hide#previous" class="btn-pre"><</button>
+    <button data-action="hide#next">></button>
 </div>
-<br>
 
 </div>
 
-<div data-controller="hide">
-    <button >Hide</button>
-</div>
 
 
 

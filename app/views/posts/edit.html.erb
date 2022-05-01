@@ -1,0 +1,10 @@
+<div class="mx-auto md:w-2/3 w-full  mb-4" data-controller="post">
+  <h1 class="font-bold text-9xl absolute bottom-9">Editing post</h1>
+  <div class="" style="position:absolute; top:300px; right:40px ">
+
+  <%= link_to "Show this post", @post, class: "ml-2 rounded-lg py-2 px-2 bg-gray-100 inline-block font-medium " %>
+  <%= link_to "Back to posts", posts_path, class: "ml-2  rounded-lg py-2 px-2 bg-gray-100 inline-block font-medium" %>
+  </div>
+  <%= render "form", post: @post %>
+
+</div>

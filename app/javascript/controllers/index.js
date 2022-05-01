@@ -3,13 +3,15 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
-
-
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+
 import HideController from "./hide_controller"
-application.register("hide",HideController)
+application.register("hide", HideController)
+
+import PostController from "./post_controller.js"
+application.register("post",PostController)
+
+
