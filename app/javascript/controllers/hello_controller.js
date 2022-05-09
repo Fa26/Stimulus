@@ -1,7 +1,9 @@
 import { Controller } from "@hotwired/stimulus"
 
+
 export default class extends Controller {
     static targets =["name","anuncement","uno","dos","botonAlert","card"]
+  
 
   connect() {
     document.body.style.backgroundImage="url('https://images.unsplash.com/photo-1583144568008-76743354fa5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')"
@@ -53,6 +55,9 @@ export default class extends Controller {
 
     }
   }
+
+
+
 
  
 }

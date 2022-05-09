@@ -13,19 +13,31 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :title ,class:"text-white "%>
+    <%= form.label :title ,class:"text-black "%>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :body,class:"text-white" %>
+    <%= form.label :body,class:"text-black" %>
     <%= form.rich_text_area :body, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-  <%= form.label :photo,class:"text-white" %>
-  <%= form.file_field :photo, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-</div>
+  <%= form.label :photo,class:"text-black" %>
+  <%= form.file_field :photo,data: {controller: "post" ,action: "post#imageUpload"}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5 ">
+    <%= form.label :tipo,class:"text-white" ,data: {controller: "post"}%>
+    <%= form.select :tipo, ['public','private'],
+    selected: 'public',data: {controller: "post", action: "change->post#hidePrivate",target: "post.tipo"},class:"rounded-md border border-gray-200"%>
+  </div>
+
+  <div class="my-5"  data-controller="post" data-post-target="field">
+    <%= form.label :personas, class:"text-white" %>
+    <%= form.text_field :personas,data: {controller: "post",action: "post#hidePrivate"} ,class:"rounded-md border border-gray-200"  %> 
+  </div>
+
   
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>

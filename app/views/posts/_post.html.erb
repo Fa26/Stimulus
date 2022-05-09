@@ -1,7 +1,7 @@
 <div id="<%= dom_id post %>" >
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Title:<%= post.title %></strong>
+    <strong class="block font-medium mb-1">Title: <%= post.title %></strong>
 
   </p>
   <p class="my-5">
@@ -9,8 +9,14 @@
   </p>
 
   <p class="my-5">
-    <%= image_tag post.photo, width:200 %>
+    <%= image_tag post.photo.variant(resize_to_limit:[150,150]), class:"rounded-lg" %>
    
+  </p>
+  <p class="my-5">
+   <strong >Tipo: <%= post.tipo %></strong>
+  </p>
+  <p class="my-5">
+   <strong class="">Personas: <%= post.personas %></strong>
   </p>
   
 

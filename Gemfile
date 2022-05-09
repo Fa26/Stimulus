@@ -22,7 +22,11 @@ gem 'stimulus-rails'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-
+#active storage
+gem 'active_storage_validations'
+#use :dimension validatos o :aspect_ratio validator
+#gem 'ruby-vips', '>= 2.1.0'
+gem 'mini_magick', '>= 4.9.5'
 # 
  gem 'jsbundling-rails'
 
@@ -62,5 +66,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "esbuild-rails", "~> 0.1.4"
 #hotwire
 gem "hotwire-rails", "~> 0.1.3"
-
+#tailwindcss
 gem "tailwindcss-rails", "~> 2.0"

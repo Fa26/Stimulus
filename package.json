@@ -10,6 +10,7 @@
     "@rails/actiontext": "^6.1.5",
     "esbuild": "^0.14.38",
     "stimulus": "^3.0.1",
+    "stimulus-carousel": "^4.0.0",
     "trix": "^1.2.0"
   }
 }
