@@ -242,6 +242,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   stimulus-rails
   tailwindcss-rails (~> 2.0)
+  turbo-rails
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers

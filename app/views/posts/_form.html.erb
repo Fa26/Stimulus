@@ -30,10 +30,10 @@
   <div class="my-5 ">
     <%= form.label :tipo,class:"text-white" ,data: {controller: "post"}%>
     <%= form.select :tipo, ['public','private'],
-    selected: 'public',data: {controller: "post", action: "change->post#hidePrivate",target: "post.tipo"},class:"rounded-md border border-gray-200"%>
+    selected: 'public',data: {controller: "post", action: "change->post#hidePrivate",target: "tipo"},class:"rounded-md border border-gray-200"%>
   </div>
 
-  <div class="my-5"  data-controller="post" data-post-target="field">
+  <div class="my-5" >
     <%= form.label :personas, class:"text-white" %>
     <%= form.text_field :personas,data: {controller: "post",action: "post#hidePrivate"} ,class:"rounded-md border border-gray-200"  %> 
   </div>
