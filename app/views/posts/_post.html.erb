@@ -8,15 +8,17 @@
   <strong class="block font-medium mb-1">Body:<%= post.body %></strong>
   </p>
 
-  <p class="my-5">
-    <%= image_tag post.photo.variant(resize_to_limit:[150,150]), class:"rounded-lg" %>
+  <p class="my-5" data-controller="post"  >
+    <strong id="tam"></strong>
+    <%= image_tag post.photo, class:"rounded-lg"  %>
    
   </p>
-  <p class="my-5">
-   <strong >Tipo: <%= post.tipo %></strong>
+  <p class="my-5" data-controller="post" >
+   <strong  data-post-target="cardTipo"></strong>
   </p>
   <p class="my-5">
-   <strong class="">Personas: <%= post.personas %></strong>
+    <strong >Tipo: <%= post.tipo %></strong><br>
+   <strong class="">Personas con acceso: <%= post.personas %> </strong>
   </p>
   
 
