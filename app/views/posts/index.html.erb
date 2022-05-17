@@ -1,15 +1,22 @@
 <div class="w-1/2 absolute top-0 right-0" data-controller="post" >
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+
   <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl ">Posts</h1>
-    <%= link_to 'New post', new_post_path, class: "rounded-lg py-3 px-5 mt-2 mr-2 bg-blue-600 text-white block font-medium" %>
-  </div>
+  
 
-  <div id="posts" class="min-w-full">
-    <%= render @posts %>
+  <div id="modal post " tabindex="-1" class="  overflow-y-auto overflow-x-hidden fixed    z-10 md:inset-0 h-modal md:h-full transition-opacity w-1/2"  style="left:560px">
+    <div class="absolute p-4 w-full max-w-7xl h-full md:h-auto  ">
+       <div class="relative  text-white bg-transparent rounded-lg shadow dark:bg-gray-700">
+          <div class="flex justify-between items-center">
+          <h1 class="font-bold text-4xl text-black ">Posts</h1>
+            <%= link_to 'New post', new_post_path, class: "rounded-lg py-3 px-5 mt-2 mr-2 bg-blue-600 text-white block font-medium" %>
+          </div>
+      
+            <%= render @posts %>
 
-  </div>
+          </div>
+        </div>
+    </div>
 </div>

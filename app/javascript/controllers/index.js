@@ -4,14 +4,14 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
+import HashMController from "./hashM_controller.js"
+application.register("hashM", HashMController)
+
+import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
-
-import HideController from "./hide_controller"
+import HideController from "./hide_controller.js"
 application.register("hide", HideController)
 
 import PostController from "./post_controller.js"
-application.register("post",PostController)
-
-
+application.register("post", PostController)

@@ -1,5 +1,5 @@
-<div class="absolute top-0 right-0 mr-2 ">
-<%= form_with(model: post, class: "contents") do |form| %>
+<div class="top-0 right-0 mr-2 ">
+<%= form_with(model: post,data: {turbo_frame: "_top"} ,class: "contents") do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -13,37 +13,35 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :title ,class:"text-black "%>
+    <%= form.label :title ,class:"text-white "%>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :body,class:"text-black" %>
+    <%= form.label :body,class:"text-white " %>
     <%= form.rich_text_area :body, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-  <%= form.label :photo,class:"text-black" %>
+  <%= form.label :photo,class:"text-white " %>
   <%= form.file_field :photo,data: {controller: "post" ,action: "post#imageUpload"}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div class="my-5 "  >
+  <div class="my-5 "  data-controller="post" >
     <%= form.label :tipo,class:"text-white" %>
-    <%= form.select :tipo, ['Public', 'Private'], selected: 'Public'%>
+    <%= form.select :tipo, ['Public', 'Private'], selected: 'Public',data:{action: "change->post#hidePrivate"}%>
 
   </div>
 
-
-
-
-  <div class="my-5"  id="personas"  >
+  
+  <div class="my-5"  id="personas">
     <%= form.label :personas, class:"text-white" %>
     <%= form.text_field :personas,class:"rounded-md border border-gray-200" %> 
   </div>
 
   
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit  class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
 </div>

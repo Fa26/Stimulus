@@ -7,6 +7,7 @@ export default class extends Controller {
         document.body.style.backgroundRepeat="no-repeat"
         document.body.style.backgroundSize="cover"
         console.log("hola desde postController")
+        this.element.addEventListener("submit",this.clear)
         const element = document.getElementsByTagName("img");
         var tam= document.getElementById("tam")
         element[0].onload = function() {
@@ -18,17 +19,22 @@ export default class extends Controller {
       
    
 
-    hidePrivate(event){
-      // var selector= document.getElementById('option')
+    hidePrivate(e){
+         const s = e.target
+         console.log(s)
+       
+         var seles= document.getElementById("tipo")
+         console.group(seles)
+       
        //var personas= document.getElementById('personas')
-        console.log("desde select")
-
-       //var text = selector.options[selector.selectedIndex].text === 'Public' ? personas.style.display="none" : personas.style.display="block"
-       //var textD = selector.options[selector.selectedIndex].text
-       //console.log(textD)
+        console.log("holaselct")
+      // var text = selector.options[selector.selectedIndex].text === 'Public' ? personas.style.display="none" : personas.style.display="block"
        //this.validarTipo(textD)
-      
+       document.getElementById("personas").classList.add("hidden")
+
     }
+
+  
     
     validarTipo(tipo){
         const inputF = document.querySelector('input[type=text]').value
@@ -42,13 +48,17 @@ export default class extends Controller {
         }
 
     }
-   
 
     imageUpload(event){
         const inputF = document.querySelector('input[type=file]')
         console.log("algo subio")
         console.log(inputF.size)
+       console.log( inputF[0].this.width)
        
     }
+
+    clear(){
+        this.element.reset()
+       }
  
 }   

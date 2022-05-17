@@ -15,5 +15,6 @@
   <body>
     <%= render 'partials/header' %>
     <%= yield %>
+    <%= turbo_frame_tag "modal" %>
   </body>
 </html>

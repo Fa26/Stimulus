@@ -1,10 +1,26 @@
-<div class="mx-auto md:w-2/3 w-full  mb-4" data-controller="post">
-  <h1 class="font-bold text-9xl absolute bottom-9">Editing post</h1>
-  <div class="" style="position:absolute; top:300px; right:40px ">
+<%= turbo_frame_tag "modal" do %>
 
-  <%= link_to "Show this post", @post, class: "ml-2 rounded-lg py-2 px-2 bg-gray-100 inline-block font-medium " %>
-  <%= link_to "Back to posts", posts_path, class: "ml-2  rounded-lg py-2 px-2 bg-gray-100 inline-block font-medium" %>
+  <div id="extralarge-modal"  tabindex="-1" class=" overflow-y-auto overflow-x-hidden fixed  z-10 w-full md:inset-0 h-modal md:h-full bg-gray-500 bg-opacity-75 transition-opacity">
+  <div class="relative p-4 w-full max-w-7xl h-full md:h-auto">
+      <div class="relative  text-white bg-transparent rounded-lg shadow dark:bg-gray-700">
+          <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600 ">
+              <h2 class="text-xl font-medium text-white dark:text-white ">
+                  Edit Post
+              </h2>
+            
+              
+          </div>
+   
+          <div class="p-6 space-y-6 h-full">
+          <%= render "form", post: @post %>
+     
+          </div>
+          <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600 ">
+          <%= link_to "Show this post", @post, class: "ml-2 rounded-lg py-2 px-2 bg-gray-100 inline-block font-medium  text-black" %>
+          <%= link_to "Back to posts",  posts_path, class: "ml-2  rounded-lg py-2 px-2 bg-gray-100 inline-block font-medium text-black" %>
+        
+          </div>
+      </div>
   </div>
-  <%= render "form", post: @post %>
-
 </div>
+<% end %>
