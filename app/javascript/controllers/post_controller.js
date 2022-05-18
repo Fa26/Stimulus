@@ -19,35 +19,17 @@ export default class extends Controller {
       
    
 
-    hidePrivate(e){
-         const s = e.target
-         console.log(s)
-       
-         var seles= document.getElementById("tipo")
-         console.group(seles)
-       
-       //var personas= document.getElementById('personas')
+    hidePrivate(){
+        console.log(this.tipoSelect(this.element.value))
         console.log("holaselct")
       // var text = selector.options[selector.selectedIndex].text === 'Public' ? personas.style.display="none" : personas.style.display="block"
-       //this.validarTipo(textD)
        document.getElementById("personas").classList.add("hidden")
 
     }
 
   
     
-    validarTipo(tipo){
-        const inputF = document.querySelector('input[type=text]').value
-        var t= inputF.length
-        console.log("dentro de validar")
-        console.log(t)
-        if(t === 0 &&tipo === 'Private'){
-            alert("No puedes dejar personas en blanco")
-        }else{
-            //alert("todo bien")
-        }
-
-    }
+    
 
     imageUpload(event){
         const inputF = document.querySelector('input[type=file]')

@@ -105,6 +105,18 @@ button{
 
  }
 
-
-
  
+ trix-toolbar .trix-button {
+    position: relative;
+    float: left;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.75em;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0 0.5em;
+    margin: 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    background: rgb(216, 118, 5); }

@@ -27,17 +27,23 @@
   <%= form.file_field :photo,data: {controller: "post" ,action: "post#imageUpload"}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div class="my-5 "  data-controller="post" >
+  <div class="my-5 "  >
     <%= form.label :tipo,class:"text-white" %>
-    <%= form.select :tipo, ['Public', 'Private'], selected: 'Public',data:{action: "change->post#hidePrivate"}%>
-
-  </div>
+    <%= form.select :tipo, ['Public', 'Private'], selected: 'Public',data:{controller: "post",action: "change->post#hidePrivate"}%>
+  
+  </diiv>
+  <div class="my-5"  id="personas">
+      <%= form.label :personas, class:"text-white" %>
+      <%= form.text_field :personas,class:"rounded-md border border-gray-200" %> 
+   </div>
+    
+          
+    
 
   
-  <div class="my-5"  id="personas">
-    <%= form.label :personas, class:"text-white" %>
-    <%= form.text_field :personas,class:"rounded-md border border-gray-200" %> 
-  </div>
+
+  
+  
 
   
   <div class="inline">
