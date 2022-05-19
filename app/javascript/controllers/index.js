@@ -7,6 +7,9 @@ import { application } from "./application"
 import HashMController from "./hashM_controller.js"
 application.register("hashM", HashMController)
 
+import HeadAddController from "./headAdd_controller.js"
+application.register("headAdd", HeadAddController)
+
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
@@ -15,3 +18,6 @@ application.register("hide", HideController)
 
 import PostController from "./post_controller.js"
 application.register("post", PostController)
+
+import TrixController from "./trix_controller.js"
+application.register("trix", TrixController)
