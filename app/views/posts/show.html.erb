@@ -9,7 +9,7 @@
 
     <%= link_to 'Edit this post', edit_post_path(@post),data: {turbo_frame_tag: "modal"} ,class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium text-black" %>
     <div class="inline-block ml-2">
-    <%= button_to 'Destroy this post', post_path(@post), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium text-black" %>
+    <%= button_to 'Destroy this post', post_path(@post), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium text-black" ,form: {data:{turbo_confirm: 'Are you sure?'}}%>
     </div>
     <%= link_to 'Back to posts', posts_path,"data-turbo-frame":"_top" ,class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium text-black" %>
     </div>
